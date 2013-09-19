@@ -1,7 +1,7 @@
 SUBDIRS:= $$(find . -maxdepth 1 -type d -iname '[^.]*')
 SUBMAKE=$(MAKE) -C $$i
 
-help:
+build:
 
 install:
 	test -d $(HOME)/.config || mkdir $(HOME)/.config
