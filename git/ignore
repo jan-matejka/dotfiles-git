@@ -3,6 +3,7 @@
 /dist
 .cabal-sandbox
 cabal.sandbox.config
+.cache
 
 # temp stuff
 .session.vim
