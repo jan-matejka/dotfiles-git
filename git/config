@@ -28,7 +28,7 @@
     cias = cia -SF97A36A1
     # use ci --amend when want to edit
     dc = diff --cached
-    lg = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -20
+    lg = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
     lgo = log --oneline --decorate
     lgm = log --date-order --pretty=%B
     lgmsid = "!f() { git log  --stat --pretty=format:"" | grep changed | grep -v '|'; }; f";
