@@ -36,6 +36,7 @@
     lgsid = log  --stat --pretty=format:""
     # ^ log stats insertions/deletions with per file statusbar
     shh = show HEAD
+    shm = show -s
     r = remote -v
     cl = "!sh -c 'git clone $1 ${1##*/}' -" # keeps the .git suffix
     # TODO: make sure the dir has .git suffix even when cloning from url without the suffix
