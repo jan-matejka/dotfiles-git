@@ -23,6 +23,7 @@
 # }}}
 
 # {{{ shorthands with options
+    autosquash = rebase --autosquash
     ci = commit
     cis = ci -SF97A36A1
     cia = commit --amend --no-edi
