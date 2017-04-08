@@ -24,6 +24,7 @@
 
 # {{{ shorthands with options
     autosquash = rebase --autosquash
+    bt = "!git branch --list -vv $(git rev-parse --abbrev-ref HEAD)"
     ci = commit
     cis = ci -SF97A36A1
     cia = commit --amend --no-edi
