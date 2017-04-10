@@ -29,6 +29,7 @@
     cis = ci -SF97A36A1
     cia = commit --amend --no-edi
     cias = cia -SF97A36A1
+    cip = "!git commit -a --amend; git push -f"
     # use ci --amend when want to edit
     dc = diff --cached
     lg = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
