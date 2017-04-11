@@ -16,6 +16,7 @@
     co = checkout
     cn = config
     d = diff
+    s = status
     sh = show --pretty=fuller
     t = tag
     psh = push
@@ -46,7 +47,7 @@
     pull = pull --ff-only
     rpl  = pull --rebase
     psht = push --tags
-    s = "!git status; git diff"
+    sd = "!git status; git diff"
     welp = clean -fd
     # don't use -x in welp as it destroyes my cabal sandboxes :/
     f = fetch -p
