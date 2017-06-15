@@ -30,6 +30,7 @@
     cia = commit --amend --no-edit
     cias = cia -SF97A36A1
     cip = "!git commit -a --amend --no-edit; git push -f"
+    chpl = "!git chop && git pull"
     # use ci --amend when want to edit
     dc = diff --cached
     lg = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
