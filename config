@@ -9,56 +9,44 @@
 
 [alias]
 # {{{ shorthands
-    a = add
-    b = branch
-    bb = branch-backup
+    a   = add
+    b   = branch
+    bb  = branch-backup
     che = cherry-pick
-    co = checkout
-    cn = config
-    d = diff
-    s = status
-    sh = show --pretty=fuller
-    t = tag
+    cl  = clone
+    co  = checkout
+    cn  = config
+    d   = diff
+    s   = status
+    sh  = show --pretty=fuller
+    t   = tag
     psh = push
 # }}}
 
 # {{{ shorthands with options
     autosquash = rebase --autosquash
     bt = "!git branch --list -vv $(git rev-parse --abbrev-ref HEAD)"
+
     ci = commit
-    cis = ci -SF97A36A1
     cia = commit --amend --no-edit
-    cias = cia -SF97A36A1
     cip = "!git commit -a --amend --no-edit; git push -f"
-    chpl = "!git chop && git pull"
-    # use ci --amend when want to edit
+
     dc = diff --cached
+
     lg = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
     lgo = log --oneline --decorate
-    lgm = log --date-order --pretty=%B
-    lgmsid = "!f() { git log  --stat --pretty=format:"" | grep changed | grep -v '|'; }; f";
-    # ^ log minimal stats insertions/deletions
-    lgsid = log  --stat --pretty=format:""
-    # ^ log stats insertions/deletions with per file statusbar
-    shm = show -s
+    lgm = log  --stat --pretty=format:"%H"
+    # ^ log minimal: show only commit hash and its diffstats
+
     r = remote -v
-    cl = "!sh -c 'git clone $1 ${1##*/}' -" # keeps the .git suffix
-    # TODO: make sure the dir has .git suffix even when cloning from url without the suffix
-    # TODO: also fucks up gitolite clones - contains the whole path user@host:repo as the directory unless it have the git suffix
     pull = pull --ff-only
-    rpl  = pull --rebase
-    psht = push --tags
-    sd = "!git status; git diff"
     welp = clean -fd
-    # don't use -x in welp as it destroyes my cabal sandboxes :/
     f = fetch -p
 
     chop = "!f() { ch=1; [ $# = 1 ] && ch=$1; git reset --hard HEAD~$ch; }; f";
     ch = "!git chop"
+    chpl = "!git chop && git pull"
 # }}}
-
-[core]
-    excludesfile = /home/yac/.gitignore
 
 [push]
     default = upstream
@@ -68,7 +56,3 @@
 
 [sendemail]
     assume8bitEncoding = true
-    tocmd = true
-    #smtpencryption =
-    #smtpserver =
-    #smtpuser =
