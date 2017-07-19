@@ -49,7 +49,7 @@
 # }}}
 
 [push]
-    default = upstream
+    default = tracking
 
 [transfer]
     fsckObjects = true
