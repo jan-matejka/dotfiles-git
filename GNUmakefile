@@ -6,8 +6,8 @@ build:
 .PHONY: install
 install:
 
-	install config $(HOME)/.gitconfig
-	install ignore $(HOME)/.gitignore
+	install .gitconfig $(HOME)/.gitconfig
+	install .gitignore $(HOME)/.gitignore
 
 .PHONY: clean
 clean:
