@@ -1,0 +1,6 @@
+#!/bin/sh
+
+show_signature=
+man git-log | grep -q -- --show-signature && show_signature=--show-signature
+
+sed "s/@@show-signature@@/$show_signature/" .gitconfig.in > .gitconfig

@@ -24,7 +24,7 @@
     d          = diff
     dc         = diff --cached
 
-    lg         = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
+    lg         = log @@show-signature@@ --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
 
     # one line pr commit. Usefull to line count (wc -l)
     lgo        = log --oneline --decorate
