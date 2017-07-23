@@ -1,50 +1,72 @@
 [user]
-    name = yac
+    name  = yac
     email = yac@blesmrt.net
 
 [color]
     status = auto
-    diff = auto
+    diff   = auto
     branch = auto
 
 [alias]
-# {{{ shorthands
-    a   = add
-    b   = branch
-    bb  = branch-backup
-    che = cherry-pick
-    cl  = clone
-    co  = checkout
-    cn  = config
-    d   = diff
-    s   = status
-    sh  = show --pretty=fuller
-    t   = tag
-    psh = push
-# }}}
-
-# {{{ shorthands with options
+    a          = add
     autosquash = rebase --autosquash
+    b          = branch
+    bb         = branch-backup
+    che        = cherry-pick
+
+    ci         = commit
+    cia        = commit --amend --no-edit
+
+    cl         = clone
+    co         = checkout
+    cn         = config
+
+    d          = diff
+    dc         = diff --cached
+
+    lg         = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
+
+    # one line pr commit. Usefull to line count (wc -l)
+    lgo        = log --oneline --decorate
+
+    # log minimal
+    lgm        = log  --stat --pretty=format:"%H"
+
+    # show remotes with their urls
+    r          = remote -v
+
+    # prevent stupid rebases
+    pull       = pull --ff-only
+
+    # cleanup build artifacts.
+    # ``git welp -x`` when updating .gitignore.
+    welp       = clean -fd
+
+    # prune no-longer valid remote refs to prevent misleading decorations
+    # in git-log and tracking branches that no longer exist.
+    f          = fetch -p
+
+    s          = status
+
+    # show comitter and commit date as well as author
+    sh         = show --pretty=fuller
+
+    t          = tag
+    psh        = push
+
+    # show tracking branch
     bt = "!git branch --list -vv $(git rev-parse --abbrev-ref HEAD)"
 
-    ci = commit
-    cia = commit --amend --no-edit
+    # commit amend everything and force push. Usefull in some stupid
+    # environments
     cip = "!git commit -a --amend --no-edit; git push -f"
 
-    dc = diff --cached
 
-    lg = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
-    lgo = log --oneline --decorate
-    lgm = log  --stat --pretty=format:"%H"
-    # ^ log minimal: show only commit hash and its diffstats
-
-    r = remote -v
-    pull = pull --ff-only
-    welp = clean -fd
-    f = fetch -p
-
+    # chop n last commits from branch or just the HEAD if n not given.
     chop = "!f() { ch=1; [ $# = 1 ] && ch=$1; git reset --hard HEAD~$ch; }; f";
     ch = "!git chop"
+
+    # chop & pull; counter-part to git-cip
     chpl = "!git chop && git pull"
 # }}}
 
