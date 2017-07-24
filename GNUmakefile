@@ -3,8 +3,10 @@
 .PHONY: build
 build:
 
+	./configure
+
 .PHONY: install
-install:
+install: build
 
 	install .gitconfig $(HOME)/.gitconfig
 	install .gitignore $(HOME)/.gitignore
