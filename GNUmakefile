@@ -9,7 +9,7 @@ build:
 install: build
 
 	install -m644 .gitconfig $(HOME)/.gitconfig
-	install -m644 gitignore $(HOME)/.gitignore
+	install -m644 ignore $(HOME)/.config/git/ignore
 
 .PHONY: clean
 clean:
