@@ -9,7 +9,6 @@
 
 [alias]
     a          = add
-    autosquash = rebase --autosquash
     b          = branch
     bb         = branch-backup
     che        = cherry-pick
@@ -78,3 +77,6 @@
 
 [sendemail]
     assume8bitEncoding = true
+
+[rebase]
+    autosquash = true
