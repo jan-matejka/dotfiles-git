@@ -9,7 +9,7 @@ build:
 install: build
 
 	install .gitconfig $(HOME)/.gitconfig
-	install .gitignore $(HOME)/.gitignore
+	install gitignore $(HOME)/.gitignore
 
 .PHONY: clean
 clean:
