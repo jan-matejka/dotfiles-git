@@ -3,4 +3,22 @@
 show_signature=
 man git-log | grep -q -- --show-signature && show_signature=--show-signature
 
+m_missing_exe="Missing required executable %s provided by %s\n"
+m_unknown_os="Unknown OS: %s\n"
+
 sed "s/@@show-signature@@/$show_signature/" .gitconfig.in > .gitconfig
+
+os=$(uname)
+if [ "$os" == "Linux" ]; then
+  install=install
+elif [ "$os" == "FreeBSD" ]; then
+  install=ginstall
+  type ginstall >/dev/null 2>&1 || {
+    printf >&2 -- "$m_missing_exe" ginstall sysutils/coreutils
+    exit 1
+  }
+else
+  printf >&2 -- $m_unknown_os "$os"
+fi
+
+sed "s/@@INSTALL@@/$install/" GNUmakefile.in > GNUmakefile

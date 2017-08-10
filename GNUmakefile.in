@@ -1,0 +1,17 @@
+.DEFAULT_GOAL := build
+
+INSTALL=@@INSTALL@@
+
+.PHONY: build
+build:
+
+	./configure
+
+.PHONY: install
+install: build
+
+	$(INSTALL) -m644 .gitconfig $(HOME)/.gitconfig
+	$(INSTALL) -m644 -D ignore $(HOME)/.config/git/ignore
+
+.PHONY: clean
+clean:
