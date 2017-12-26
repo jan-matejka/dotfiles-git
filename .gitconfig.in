@@ -58,7 +58,7 @@
 
     # commit amend everything and force push. Usefull in some stupid
     # environments
-    cip = "!git commit -a --amend --no-edit; git push -f"
+    cyp = "!git commit -a --amend --no-edit; git push -f"
 
 
     # chop n last commits from branch or just the HEAD if n not given.
