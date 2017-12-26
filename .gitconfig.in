@@ -60,6 +60,8 @@
     # environments
     cyp = "!git commit -a --amend --no-edit; git push -f"
 
+    # make a WIP commit
+    cip = "commit -a -m wip"
 
     # chop n last commits from branch or just the HEAD if n not given.
     chop = "!f() { ch=1; [ $# = 1 ] && ch=$1; git reset --hard HEAD~$ch; }; f";
