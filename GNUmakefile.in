@@ -5,8 +5,6 @@ INSTALL=@@INSTALL@@
 .PHONY: build
 build:
 
-	./configure
-
 .PHONY: install
 install: build
 
