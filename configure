@@ -1,7 +1,11 @@
 #!/bin/sh
 
+o_show_sig=false
+o_show_sig=true
+#man git-log | grep -q -- --show-signature && o_show_sig=true
+
 show_signature=
-man git-log | grep -q -- --show-signature && show_signature=--show-signature
+$o_show_sig && show_signature=--show-signature
 
 m_missing_exe="Missing required executable %s provided by %s\n"
 m_unknown_os="Unknown OS: %s\n"
