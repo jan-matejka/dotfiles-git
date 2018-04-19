@@ -31,6 +31,10 @@
     # log minimal
     lgm        = log  --stat --pretty=format:"%H"
 
+    # log - print hash only
+    # usefull for `g lgh <filtering-argv> | xargs`
+    lgh        = log --pretty=format:"%H"
+
     # show remotes with their urls
     r          = remote -v
 
