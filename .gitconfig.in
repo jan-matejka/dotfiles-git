@@ -62,7 +62,7 @@
 
     # commit amend everything and force push. Usefull in some stupid
     # environments
-    cyp = "!git commit -a -m 'wip'; git push --force-with-lease"
+    cipp = "!git commit -a -m 'wip'; git push --force-with-lease"
 
     # make a WIP commit
     cip = "commit -a -m wip"
