@@ -4,6 +4,8 @@
 .cabal-sandbox
 cabal.sandbox.config
 .cache
+.tox
+.coverage
 
 # temp stuff
 .session.vim
