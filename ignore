@@ -11,6 +11,11 @@ cabal.sandbox.config
 .session.vim
 *~
 
+# images
+*.png
+*.jpg
+*.jpeg
+
 # Compiled source #
 *.pyc
 *.pyco
