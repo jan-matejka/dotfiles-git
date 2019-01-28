@@ -25,6 +25,7 @@
 
     lg         = log @@show-signature@@ --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
 
+    lg1        = lg -1
     # one line pr commit. Usefull to line count (wc -l)
     lgo        = log --oneline --decorate
 
