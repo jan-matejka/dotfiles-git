@@ -74,6 +74,8 @@
 
     # chop & pull; counter-part to git-cip
     chpl = "!git chop && git pull"
+
+    skipci = push -o ci.skip
 # }}}
 
 [push]
