@@ -53,7 +53,8 @@
     s          = status
 
     # show comitter and commit date as well as author
-    sh         = show --pretty=fuller
+    # sh         = show --pretty=fuller
+    sh         = "!f() { git log --stat --format= $@ -1; PAGER=cat git show $@; }; f"
 
     t          = tag
     psh        = push
