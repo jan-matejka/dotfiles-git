@@ -37,6 +37,7 @@
     lgh        = log --pretty=format:"%H"
 
     lg         = lgo
+    lgs        = lg --stat
 
     # show remotes with their urls
     r          = remote -v
