@@ -42,9 +42,6 @@
     # show remotes with their urls
     r          = remote -v
 
-    # prevent stupid rebases
-    pull       = pull --ff-only
-
     # cleanup build artifacts.
     # ``git welp -x`` when updating .gitignore.
     welp       = clean -fd
@@ -93,3 +90,6 @@
 
 [rebase]
     autosquash = true
+
+[pull]
+  ff = only
