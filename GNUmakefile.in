@@ -1,6 +1,14 @@
 .DEFAULT_GOAL := build
 
-INSTALL=@@INSTALL@@
+OS := $(shell uname)
+
+ifeq ($(OS), Linux)
+INSTALL := install
+else ifeq ($(OS), FreeBSD)
+INSTALL := ginstall
+else
+$(error Unsupported OS $(OS))
+endif
 
 .PHONY: build
 build:
