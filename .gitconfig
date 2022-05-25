@@ -36,7 +36,7 @@
     # usefull for `g lgh <filtering-argv> | xargs`
     lgh        = log --pretty=format:"%H"
 
-    lg         = lgo
+    lg         = lgo --graph
     lgs        = lg --stat
 
     # show remotes with their urls
