@@ -60,6 +60,7 @@
 
     t          = tag
     psh        = push
+    p          = push
 
     # show tracking branch
     bt = "!git branch --list -vv $(git rev-parse --abbrev-ref HEAD)"
