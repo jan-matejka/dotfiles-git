@@ -23,6 +23,8 @@
     d          = diff
     dc         = diff --cached
 
+    fpsh       = push --force-with-lease
+
     lgf         = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
 
     lg1        = lg -1
