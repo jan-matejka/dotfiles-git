@@ -54,9 +54,11 @@
 
     s          = status
 
-    # show comitter and commit date as well as author
-    # sh         = show --pretty=fuller
-    sh         = "!f() { git log --stat --format= $@ -1; git show $@; }; f"
+    # Generate a diffstat.
+    # A list of changed file paths and numerical summary of the changes in each. The diffstat is
+    # separated from commit message by a line of `---`.
+    # Generate a unified diff.
+    sh = show --stat -u
 
     t          = tag
     psh        = push
