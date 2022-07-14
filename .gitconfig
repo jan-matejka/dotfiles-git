@@ -52,6 +52,8 @@
     # in git-log and tracking branches that no longer exist.
     f          = fetch -p
 
+    rc = rebase --continue
+
     s          = status
 
     # Generate a diffstat.
