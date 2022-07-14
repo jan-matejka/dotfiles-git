@@ -53,6 +53,7 @@
     f          = fetch -p
 
     rc = rebase --continue
+    ri = rebase -i
 
     s          = status
 
