@@ -18,6 +18,15 @@
 
     cl         = clone
     co         = checkout
+
+    # TODO: run git-lg1 after git-co and git-rebase
+    # this breaks tab-completion.
+    # https://stackoverflow.com/questions/66890696/git-completion-for-alias-as-if-for-git-itself
+    # works for bash only I suppose.
+    # https://stackoverflow.com/questions/14307086/tab-completion-for-aliased-sub-commands-in-zsh-alias-gco-git-checkout
+    # zsh but different alias.
+    # co         = "!f() { git checkout $@ && git log -1; }; f"
+
     cn         = config
 
     d          = diff
