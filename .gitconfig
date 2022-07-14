@@ -60,6 +60,9 @@
     # Generate a unified diff.
     sh = show --stat -u
 
+    # Show command for git-review https://github.com/yaccz/git-review
+    show-review = show --stat -u --color=always
+
     t          = tag
     psh        = push
     p          = push
