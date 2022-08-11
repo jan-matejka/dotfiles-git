@@ -41,7 +41,7 @@
     lgo        = log --oneline --decorate
 
     # last commits log message (useful before reset HEAD~1)
-    lgm        = log  --format="%B" -1
+    lgm        = log  --format="%s" -1
 
     # log - print hash only
     # usefull for `g lgh <filtering-argv> | xargs`
