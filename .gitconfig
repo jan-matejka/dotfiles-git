@@ -116,3 +116,6 @@
 
 [init]
   defaultBranch = master
+
+[includeIf "gitdir:~/git/ipf/"]
+  path = ~/.gitconfig.ipf
