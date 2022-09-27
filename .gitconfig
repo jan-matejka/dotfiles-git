@@ -117,5 +117,8 @@
 [init]
   defaultBranch = master
 
+[clone]
+    defaultRemoteName = up
+
 [includeIf "gitdir:~/git/ipf/"]
   path = ~/.gitconfig.ipf
