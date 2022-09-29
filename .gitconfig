@@ -61,6 +61,10 @@
     # in git-log and tracking branches that no longer exist.
     f          = fetch -p
 
+    # This spells `g rc` on the command line. Should probably be repurposed for sending
+    # negative review commentary. But also maybe as external `grc` to be more on the nose since this
+    # took me 2 months to realize. Also nice
+    # addition to `grr` - https://github.com/jan-matejka/dotfiles-zsh/blob/a5cf4dd3d724fd425a7f5c08a4bcec187e130ab4/.zshrc#L166
     rc = rebase --continue
     ri = rebase -i
 
