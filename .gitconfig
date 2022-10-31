@@ -124,5 +124,5 @@
 [clone]
     defaultRemoteName = up
 
-[includeIf "gitdir:~/git/ipf/"]
-  path = ~/.gitconfig.ipf
+[includeIf "gitdir:~/git/eb/"]
+  path = ~/.gitconfig.eb
