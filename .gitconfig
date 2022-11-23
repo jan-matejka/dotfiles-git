@@ -46,6 +46,8 @@
     # log - print hash only
     # usefull for `g lgh <filtering-argv> | xargs`
     lgh        = log --pretty=format:"%H"
+    # log oneline with date
+    lgd        = log --color --pretty=format:'%C(yellow)%h %C(green)%cs %C(reset)%s' --decorate
 
     lg         = lgo --graph
     lgs        = lg --stat
