@@ -49,7 +49,7 @@
     # log oneline with date
     lgd        = log --color --pretty=format:'%C(yellow)%h %C(green)%cs %C(reset)%s' --decorate
 
-    lg         = lgo --graph
+    lg         = log --oneline --decorate --graph
     lgs        = lg --stat
 
     # show remotes with their urls
