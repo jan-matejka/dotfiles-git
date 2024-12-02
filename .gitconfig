@@ -55,6 +55,7 @@
     # show remotes with their urls
     r          = remote -v
 
+    w       = worktree
     # cleanup build artifacts.
     # ``git welp -x`` when updating .gitignore.
     welp       = clean -fd
