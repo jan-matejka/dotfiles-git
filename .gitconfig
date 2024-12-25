@@ -129,3 +129,8 @@
 
 [includeIf "gitdir:~/git/eb/"]
   path = ~/.gitconfig.eb
+
+[lfs "ssh"]
+  # Do not attempt to set up its own multiplexing, deferring to .ssh configuration.
+  # https://github.com/git-lfs/git-lfs/issues/5784#issuecomment-2239826183
+  autoMultiplex=false
