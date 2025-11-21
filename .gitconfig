@@ -65,6 +65,10 @@
     # in git-log and tracking branches that no longer exist.
     f          = fetch -p
 
+    # fixup-commit.
+    # Slight issue: fu -a HEAD~3 is not possible.
+    fu         = commit --fixup
+
     # This spells `g rc` on the command line. Should probably be repurposed for sending
     # negative review commentary. But also maybe as external `grc` to be more on the nose since this
     # took me 2 months to realize. Also nice
