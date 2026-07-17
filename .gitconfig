@@ -53,6 +53,9 @@
     lg         = log --oneline --decorate --graph
     lgs        = lg --stat
 
+    m = merge
+    ma = merge --abort
+
     # show remotes with their urls
     r          = remote -v
 
