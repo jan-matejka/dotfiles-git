@@ -78,6 +78,7 @@
     # addition to `grr` - https://github.com/jan-matejka/dotfiles-zsh/blob/a5cf4dd3d724fd425a7f5c08a4bcec187e130ab4/.zshrc#L166
     rc = rebase --continue
     ri = rebase -i
+    ra = rebase --abort
 
     s          = status
 
