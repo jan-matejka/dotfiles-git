@@ -131,7 +131,7 @@
   ff = only
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
 
 [clone]
     defaultRemoteName = up
