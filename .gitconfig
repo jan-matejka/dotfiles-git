@@ -34,6 +34,7 @@
 
     fpsh       = push --force-with-lease
 
+    lg         = log --oneline --decorate --graph
     lgf         = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
 
     lg1        = lg -1 --stat
@@ -50,7 +51,6 @@
     # log oneline with date
     lgd        = log --color --pretty=format:'%C(yellow)%h %C(green)%cs %C(reset)%s' --decorate
 
-    lg         = log --oneline --decorate --graph
     lgs        = lg --stat
 
     m = merge
