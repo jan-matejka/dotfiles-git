@@ -35,8 +35,8 @@
     fpsh       = push --force-with-lease
 
     l          = log --oneline --decorate --graph
-    lg         = lgf
-    lgf         = log --show-signature --show-notes=* --stat --graph --color --abbrev-commit --decorate=full --pretty=fuller -50
+    lg         = log --show-signature --show-notes=* --stat --graph --color --no-abbrev-commit --decorate=full --pretty=fuller -50
+    lgf         = lg
 
     lg1        = lg -1 --stat
     lg2        = log --decorate --graph --color --pretty='format:%C(auto)%h %C(cyan)%cI %C(auto)%aE %d %s'
