@@ -21,3 +21,9 @@ install: build
 
 .PHONY: clean
 clean:
+
+.PHONY: diff
+diff:
+
+	diff -burN $(HOME)/.gitconfig .gitconfig
+	diff -burN $(HOME)/.config/git/ignore ignore
