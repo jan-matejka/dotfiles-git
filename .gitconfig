@@ -33,6 +33,8 @@
     dc         = diff --cached
 
     fpsh       = push --force-with-lease
+    fu         = "!f() { n=$#; i=0; while [ $i -lt $((n-1)) ]; do set -- \"$@\" \"$1\"; shift; i=$((i+1)); done; commitish=$1; shift; set -x; git commit \"$@\" --fixup \"$commitish\"; }; f"
+    # fu is POSIX sh
 
     l          = log --oneline --decorate --graph
     lg         = log --show-signature --show-notes=* --stat --graph --color --no-abbrev-commit --decorate=full --pretty=fuller -50
@@ -68,10 +70,6 @@
     # prune no-longer valid remote refs to prevent misleading decorations
     # in git-log and tracking branches that no longer exist.
     f          = fetch -p
-
-    # fixup-commit.
-    # Slight issue: fu -a HEAD~3 is not possible.
-    fu         = commit --fixup
 
     # This spells `g rc` on the command line. Should probably be repurposed for sending
     # negative review commentary. But also maybe as external `grc` to be more on the nose since this
