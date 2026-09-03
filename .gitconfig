@@ -95,6 +95,8 @@
     rc = rebase --continue
     ri = rebase -i
 
+    root = rev-parse --show-toplevel
+
     s          = status
 
     # Generate a diffstat.
