@@ -11,10 +11,28 @@
     a          = add
     b          = branch
     bb         = branch-backup
+
+    # show tracking branch
+    bt = "!git branch --list -vv $(git rev-parse --abbrev-ref HEAD)"
+
     che        = cherry-pick
+
+    # chop n last commits from branch or just the HEAD if n not given.
+    chop = "!f() { ch=1; [ $# = 1 ] && ch=$1; git reset --hard HEAD~$ch; }; f";
+    ch = "!git chop"
+
+    # chop & pull; counter-part to git-cip
+    chpl = "!git chop && git pull"
 
     ci         = commit
     cia        = commit --amend --no-edit
+
+    # commit amend everything and force push. Usefull in some stupid
+    # environments
+    cipp = "!git commit -a -m 'wip'; git push --force-with-lease"
+
+    # make a WIP commit
+    cip = "commit -a -m wip"
 
     cl         = clone
     co         = checkout
@@ -31,6 +49,10 @@
 
     d          = diff
     dc         = diff --cached
+
+    # prune no-longer valid remote refs to prevent misleading decorations
+    # in git-log and tracking branches that no longer exist.
+    f          = fetch -p
 
     fpsh       = push --force-with-lease
     fu         = "!f() { n=$#; i=0; while [ $i -lt $((n-1)) ]; do set -- \"$@\" \"$1\"; shift; i=$((i+1)); done; commitish=$1; shift; set -x; git commit \"$@\" --fixup \"$commitish\"; }; f"
@@ -59,25 +81,19 @@
     m = merge
     ma = merge --abort
 
+    psh        = push
+    p          = push
+
     # show remotes with their urls
     r          = remote -v
-
-    w       = worktree
-    # cleanup build artifacts.
-    # ``git welp -x`` when updating .gitignore.
-    welp       = clean -fd
-
-    # prune no-longer valid remote refs to prevent misleading decorations
-    # in git-log and tracking branches that no longer exist.
-    f          = fetch -p
 
     # This spells `g rc` on the command line. Should probably be repurposed for sending
     # negative review commentary. But also maybe as external `grc` to be more on the nose since this
     # took me 2 months to realize. Also nice
     # addition to `grr` - https://github.com/jan-matejka/dotfiles-zsh/blob/a5cf4dd3d724fd425a7f5c08a4bcec187e130ab4/.zshrc#L166
+    ra = rebase --abort
     rc = rebase --continue
     ri = rebase -i
-    ra = rebase --abort
 
     s          = status
 
@@ -90,28 +106,15 @@
     # Show command for git-review https://github.com/yaccz/git-review
     show-review = show --stat -u --color=always
 
-    t          = tag
-    psh        = push
-    p          = push
-
-    # show tracking branch
-    bt = "!git branch --list -vv $(git rev-parse --abbrev-ref HEAD)"
-
-    # commit amend everything and force push. Usefull in some stupid
-    # environments
-    cipp = "!git commit -a -m 'wip'; git push --force-with-lease"
-
-    # make a WIP commit
-    cip = "commit -a -m wip"
-
-    # chop n last commits from branch or just the HEAD if n not given.
-    chop = "!f() { ch=1; [ $# = 1 ] && ch=$1; git reset --hard HEAD~$ch; }; f";
-    ch = "!git chop"
-
-    # chop & pull; counter-part to git-cip
-    chpl = "!git chop && git pull"
-
     skipci = push -o ci.skip
+
+    t          = tag
+
+    w       = worktree
+    # cleanup build artifacts.
+    # ``git welp -x`` when updating .gitignore.
+
+    welp       = clean -fd
 # }}}
 
 [push]
