@@ -34,7 +34,7 @@
     # make a WIP commit
     cip = "commit -a -m wip"
 
-    cl         = clone
+    cl = "!f() { url=\"$1\"; name=$(basename \"$url\" .git); branch=$(git ls-remote --symref \"$url\" HEAD | head -1 | cut -f1 | sed 's#^ref: refs/heads/##'); git clone \"$url\" \"$name/$branch\"; }; f"
     co         = checkout
 
     # TODO: run git-lg1 after git-co and git-rebase
