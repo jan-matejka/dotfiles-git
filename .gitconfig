@@ -59,6 +59,8 @@
     # fu is POSIX sh
 
     l          = log --oneline --decorate --graph
+    # body
+    lb         = log --pretty=%B
     lg         = log --show-signature --show-notes=* --stat --graph --color --no-abbrev-commit --decorate=full --pretty=fuller -50
     lgf         = lg
 
