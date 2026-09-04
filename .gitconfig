@@ -11,6 +11,7 @@
     a          = add
     b          = branch
     bb         = branch-backup
+    bc  = branch --contains
 
     # show tracking branch
     bt = "!git branch --list -vv $(git rev-parse --abbrev-ref HEAD)"
