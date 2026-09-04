@@ -56,7 +56,9 @@
 
     fpsh       = push --force-with-lease
     fu         = "!f() { n=$#; i=0; while [ $i -lt $((n-1)) ]; do set -- \"$@\" \"$1\"; shift; i=$((i+1)); done; commitish=$1; shift; set -x; git commit \"$@\" --fixup \"$commitish\"; }; f"
-    # fu is POSIX sh
+    # fu is POSIX sh.
+
+    hr = reset --hard
 
     l          = log --oneline --decorate --graph
     # body
@@ -112,6 +114,8 @@
     show-review = show --stat -u --color=always
 
     skipci = push -o ci.skip
+
+    sr = reset --soft
 
     t          = tag
 
