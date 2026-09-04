@@ -56,7 +56,7 @@
 
     fpsh       = push --force-with-lease
     ft = cif -t ft
-    fu         = "!f() { n=$#; i=0; while [ $i -lt $((n-1)) ]; do set -- \"$@\" \"$1\"; shift; i=$((i+1)); done; commitish=$1; shift; set -x; git commit \"$@\" --fixup \"$commitish\"; }; f"
+    fu = "!f() { opts=; c=; for x in \"$@\"; do case \"$x\" in -*) opts=\"${opts:+$opts }$x\" ;; *) c=\"$x\" ;; esac; done; git commit $opts --fixup=\"$c\"; }; f"
     # fu is POSIX sh.
     fx = cif -t fx
 
