@@ -94,7 +94,7 @@
     # took me 2 months to realize. Also nice
     # addition to `grr` - https://github.com/jan-matejka/dotfiles-zsh/blob/a5cf4dd3d724fd425a7f5c08a4bcec187e130ab4/.zshrc#L166
     ra = rebase --abort
-    rb = rebase
+    rb = "!f() { git bb; git rebase \"$@\"; }; f"
     rc = rebase --continue
     ri = rebase -i
 
