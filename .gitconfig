@@ -55,8 +55,10 @@
     f          = fetch -p
 
     fpsh       = push --force-with-lease
+    ft = cif -t ft
     fu         = "!f() { n=$#; i=0; while [ $i -lt $((n-1)) ]; do set -- \"$@\" \"$1\"; shift; i=$((i+1)); done; commitish=$1; shift; set -x; git commit \"$@\" --fixup \"$commitish\"; }; f"
     # fu is POSIX sh.
+    fx = cif -t fx
 
     hr = reset --hard
 
@@ -98,7 +100,9 @@
     ra = rebase --abort
     rb = "!f() { git bb; git rebase \"$@\"; }; f"
     rc = rebase --continue
+    rf = cif -t rf
     ri = rebase -i
+    td = cif -t td
 
     root = rev-parse --show-toplevel
 
