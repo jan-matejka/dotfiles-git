@@ -33,7 +33,7 @@
     cipp = "!git commit -a -m 'wip'; git push --force-with-lease"
 
     # make a WIP commit
-    cip = "commit -a -m wip"
+    wip = "commit -a -m wip"
 
     cl = "!f() { url=\"$1\"; name=$(basename \"$url\" .git); branch=$(git ls-remote --symref \"$url\" HEAD | head -1 | cut -f1 | sed 's#^ref: refs/heads/##'); git clone \"$url\" \"$name/$branch\"; }; f"
     co         = checkout
