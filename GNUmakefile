@@ -25,5 +25,5 @@ clean:
 .PHONY: diff
 diff:
 
-	diff -burN $(HOME)/.gitconfig .gitconfig
-	diff -burN $(HOME)/.config/git/ignore ignore
+	diff -burN $(HOME)/.gitconfig .gitconfig || [ $$? -eq 1 ]
+	diff -burN $(HOME)/.config/git/ignore ignore || [ $$? -eq 1 ]
