@@ -99,6 +99,7 @@
     rc = rebase --continue
     rf = cif -t rf
     ri = rebase -i
+    rs = rebase --skip
     td = cif -t td
 
     root = rev-parse --show-toplevel
