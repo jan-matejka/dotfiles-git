@@ -76,9 +76,6 @@
     # last commits log message (useful before reset HEAD~1)
     lgm        = log  --format="%s" -1
 
-    # log - print hash only
-    # usefull for `g lgh <filtering-argv> | xargs`
-    lgh        = log --pretty=format:"%H"
     # log oneline with date
     lgd        = log --color --pretty=format:'%C(yellow)%h %C(green)%cs %C(reset)%s' --decorate
 
