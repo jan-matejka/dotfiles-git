@@ -16,8 +16,8 @@ build:
 .PHONY: install
 install: build
 
-	$(INSTALL) -m644 .gitconfig $(HOME)/.gitconfig
-	$(INSTALL) -m644 -D ignore $(HOME)/.config/git/ignore
+	$(INSTALL) -m644 --owner=$(USER) .gitconfig $(HOME)/.gitconfig
+	$(INSTALL) -m644 --owner=$(USER) -D ignore $(HOME)/.config/git/ignore
 
 .PHONY: clean
 clean:
