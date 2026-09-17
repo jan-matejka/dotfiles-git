@@ -25,8 +25,8 @@
     # chop & pull; counter-part to git-cip
     chpl = "!git chop && git pull"
 
-    ci         = commit
-    cia        = commit --amend --no-edit
+    ci         = komitr
+    cia        = komitr --amend --no-edit
 
     # commit amend everything and force push. Usefull in some stupid
     # environments
@@ -46,8 +46,6 @@
     # zsh but different alias.
     # co         = "!f() { git checkout $@ && git log -1; }; f"
 
-    cn         = config
-
     d          = diff
     dc         = diff --cached
 
@@ -66,25 +64,14 @@
     # body
     lb         = log --pretty=%B
     lg         = log --show-signature --show-notes=* --stat --graph --color --no-abbrev-commit --decorate=full --pretty=fuller -50
-    lgf         = lg
 
-    lg1        = lg -1 --stat
     lg2        = log --decorate --graph --color --pretty='format:%C(auto)%h %C(cyan)%cI %C(auto)%aE %d %s'
-    # one line pr commit. Usefull to line count (wc -l)
-    lgo        = log --oneline --decorate
-
-    # last commits log message (useful before reset HEAD~1)
-    lgm        = log  --format="%s" -1
-
-    # log oneline with date
-    lgd        = log --color --pretty=format:'%C(yellow)%h %C(green)%cs %C(reset)%s' --decorate
 
     lgs        = lg --stat
 
     m = merge
     ma = merge --abort
 
-    psh        = push
     p          = push
 
     # show remotes with their urls
@@ -98,7 +85,6 @@
     rb = "!f() { git bb; git rebase \"$@\"; }; f"
     rc = rebase --continue
     rf = cif -t rf
-    ri = rebase -i
     rs = rebase --skip
     td = cif -t td
 
@@ -112,10 +98,8 @@
     # Generate a unified diff.
     sh = show --stat -u
 
-    # Show command for git-review https://github.com/yaccz/git-review
+    # FIXME: Show command for git-review https://github.com/yaccz/git-review
     show-review = show --stat -u --color=always
-
-    skipci = push -o ci.skip
 
     sr = reset --soft
 
@@ -148,9 +132,6 @@
 
 [clone]
     defaultRemoteName = up
-
-[includeIf "gitdir:~/git/eb/"]
-  path = ~/.gitconfig.eb
 
 [lfs "ssh"]
   # Do not attempt to set up its own multiplexing, deferring to .ssh configuration.
