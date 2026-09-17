@@ -65,9 +65,9 @@
     lb         = log --pretty=%B
     lg         = log --show-signature --show-notes=* --stat --graph --color --no-abbrev-commit --decorate=full --pretty=fuller -50
 
-    lg2        = log --decorate --graph --color --pretty='format:%C(auto)%h %C(cyan)%cI %C(auto)%aE %d %s'
+    l2        = log --decorate --graph --color --pretty='format:%C(auto)%h %C(cyan)%cI %C(auto)%aE %d %s'
 
-    lgs        = lg --stat
+    ls        = lg --stat
 
     m = merge
     ma = merge --abort
