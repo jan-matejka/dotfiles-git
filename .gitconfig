@@ -25,8 +25,8 @@
     # chop & pull; counter-part to git-cip
     chpl = "!git chop && git pull"
 
-    ci         = komitr
-    cia        = komitr --amend --no-edit
+    ci         = !komitr
+    cia        = ci --amend --no-edit
 
     # commit amend everything and force push. Usefull in some stupid
     # environments
@@ -54,10 +54,10 @@
     f          = fetch -p
 
     fpsh       = push --force-with-lease
-    ft = cif -t ft
+    ft = ci -t ft
     fu = "!f() { opts=; c=; for x in \"$@\"; do case \"$x\" in -*) opts=\"${opts:+$opts }$x\" ;; *) c=\"$x\" ;; esac; done; git commit $opts --fixup=\"$c\"; }; f"
     # fu is POSIX sh.
-    fx = cif -t fx
+    fx = ci -t fx
 
     hr = reset --hard
 
@@ -84,9 +84,9 @@
     ra = rebase --abort
     rb = "!f() { git bb; git rebase \"$@\"; }; f"
     rc = rebase --continue
-    rf = cif -t rf
+    rf = ci -t rf
     rs = rebase --skip
-    td = cif -t td
+    td = ci -t td
 
     root = rev-parse --show-toplevel
 
